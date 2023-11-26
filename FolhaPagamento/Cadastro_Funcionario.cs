@@ -8,7 +8,7 @@ namespace FolhaPagamento
 {
     public partial class iStorm : Form
     {
-        private const string apiUrl = "https://pimbackend.onrender.com/funcionarios"; // Substitua pela URL da sua API
+        private const string apiUrl = "https://pimbackend.onrender.com/funcionarios"; // URL da sua API
 
         public iStorm()
         {
@@ -75,8 +75,6 @@ namespace FolhaPagamento
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Seu código para cadastrar funcionário
-            MessageBox.Show("Clicou no botão!");
 
         }
 
