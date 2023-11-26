@@ -75,8 +75,6 @@ namespace FolhaPagamento
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Seu código para cadastrar funcionário
-            MessageBox.Show("Clicou no botão!");
 
         }
 

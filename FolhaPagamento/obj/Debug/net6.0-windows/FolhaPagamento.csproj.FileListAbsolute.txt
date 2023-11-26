@@ -22,7 +22,6 @@ C:\Users\Gabriel\Desktop\Gabriel\dev\Projetos\DESKTOP-PIM-IV\FolhaPagamento\obj\
 C:\Users\Gabriel\Desktop\Gabriel\dev\Projetos\DESKTOP-PIM-IV\FolhaPagamento\obj\Debug\net6.0-windows\FolhaPagamento.dll
 C:\Users\Gabriel\Desktop\Gabriel\dev\Projetos\DESKTOP-PIM-IV\FolhaPagamento\obj\Debug\net6.0-windows\refint\FolhaPagamento.dll
 C:\Users\Gabriel\Desktop\Gabriel\dev\Projetos\DESKTOP-PIM-IV\FolhaPagamento\obj\Debug\net6.0-windows\FolhaPagamento.pdb
-C:\Users\Gabriel\Desktop\Gabriel\dev\Projetos\DESKTOP-PIM-IV\FolhaPagamento\obj\Debug\net6.0-windows\FolhaPagamento.Cadastro_Funcionario.resources
 C:\Users\Gabriel\Desktop\Gabriel\dev\Projetos\DESKTOP-PIM-IV\FolhaPagamento\obj\Debug\net6.0-windows\FolhaPagamento.Tela_Inicial.resources
 C:\Users\Gabriel\Desktop\Gabriel\dev\Projetos\DESKTOP-PIM-IV\FolhaPagamento\bin\Debug\net6.0-windows\FolhaPagamento.exe
 C:\Users\Gabriel\Desktop\Gabriel\dev\Projetos\DESKTOP-PIM-IV\FolhaPagamento\bin\Debug\net6.0-windows\FolhaPagamento.deps.json
@@ -104,3 +103,4 @@ C:\Users\eduvi\OneDrive\Área de Trabalho\DESKTOP-PIM-IV\FolhaPagamento\obj\Debu
 C:\Users\eduvi\OneDrive\Área de Trabalho\DESKTOP-PIM-IV\FolhaPagamento\obj\Debug\net6.0-windows\FolhaPagamento.Properties.Resources.resources
 C:\Users\eduvi\OneDrive\Área de Trabalho\DESKTOP-PIM-IV\FolhaPagamento\obj\Debug\net6.0-windows\FolhaPagamento.Visualizar_FolhaPagamento1.resources
 C:\Users\eduvi\OneDrive\Área de Trabalho\DESKTOP-PIM-IV\FolhaPagamento\obj\Debug\net6.0-windows\FolhaPagamento.Visualizar_Funcionarios1.resources
+C:\Users\Gabriel\Desktop\Gabriel\dev\Projetos\DESKTOP-PIM-IV\FolhaPagamento\obj\Debug\net6.0-windows\FolhaPagamento.iStorm.resources
