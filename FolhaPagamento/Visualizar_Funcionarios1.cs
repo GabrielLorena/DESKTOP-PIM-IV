@@ -13,7 +13,7 @@ namespace FolhaPagamento
 {
     public partial class Visualizar_Funcionarios1 : Form
     {
-        private const string apiUrl = "http://localhost:3000/funcionarios/"; // URL da API
+        private const string apiUrl = "https://pimbackend.onrender.com/funcionarios"; // URL da API
         private List<SeuObjeto> dadosOriginais; // Lista para armazenar os dados originais
 
         public Visualizar_Funcionarios1()

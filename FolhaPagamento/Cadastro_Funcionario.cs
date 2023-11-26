@@ -8,7 +8,7 @@ namespace FolhaPagamento
 {
     public partial class iStorm : Form
     {
-        private const string apiUrl = "http://localhost:3000/funcionarios"; // Substitua pela URL da sua API
+        private const string apiUrl = "https://pimbackend.onrender.com/funcionarios"; // Substitua pela URL da sua API
 
         public iStorm()
         {
