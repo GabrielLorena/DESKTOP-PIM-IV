@@ -103,7 +103,7 @@ namespace FolhaPagamento
                 }
                 else
                 {
-                    MessageBox.Show("Erro ao cadastrar o funcionário testw.");
+                    MessageBox.Show("Erro ao cadastrar o funcionário.");
                 }
             }
         }

@@ -1,12 +1,8 @@
 ﻿using Newtonsoft.Json; // Biblioteca para trabalhar com JSON
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using System.Net.Http;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FolhaPagamento
@@ -37,6 +33,9 @@ namespace FolhaPagamento
 
                     // Popula o DataGridView com os dados obtidos da API
                     dataGridView1.DataSource = dadosOriginais;
+
+                    // Configura a ordem das colunas após carregar os dados
+                    ConfigurarOrdemColunas();
                 }
                 else
                 {
@@ -46,6 +45,26 @@ namespace FolhaPagamento
             catch (Exception ex)
             {
                 MessageBox.Show("Ocorreu um erro: " + ex.Message); // Exibe mensagem em caso de erro durante a requisição
+            }
+        }
+
+        // Método para configurar a ordem das colunas no DataGridView
+        private void ConfigurarOrdemColunas()
+        {
+            // Define a ordem desejada das colunas
+            string[] ordemColunas = { "Funcionario", "NomeFunc", "Imposto", "HorasTrabalhadas", "Bonus", "Data_Vigencia" };
+
+            // Configura a ordem das colunas no DataGridView
+            foreach (string nomeColuna in ordemColunas)
+            {
+                DataGridViewColumn coluna = dataGridView1.Columns[nomeColuna];
+                if (coluna != null)
+                {
+                    // Configura a visibilidade da coluna
+                    coluna.Visible = true;
+                    // Move a coluna para a posição desejada
+                    coluna.DisplayIndex = Array.IndexOf(ordemColunas, nomeColuna);
+                }
             }
         }
 
@@ -65,30 +84,7 @@ namespace FolhaPagamento
         // Método executado ao clicar no botão de busca
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string termoBusca = txtProcurar.Text.ToLower(); // Obtém o termo de busca em letras minúsculas
-
-            if (!string.IsNullOrWhiteSpace(termoBusca)) // Se o termo de busca não estiver vazio
-            {
-                // Filtra os dados originais com base no termo de busca
-                List<SeuObjeto> resultadosFiltrados = dadosOriginais
-                    .Where(o =>
-                        o.NomeFunc.ToLower().Contains(termoBusca) ||
-                        o.Funcionario.ToLower().Contains(termoBusca) ||
-                        o.Imposto.ToLower().Contains(termoBusca) ||
-                        o.HorasTrabalhadas.ToLower().Contains(termoBusca) ||
-                        o.Bonus.ToLower().Contains(termoBusca)
-                    // Adicione outras propriedades que deseja incluir no filtro
-                    )
-                    .ToList();
-
-                // Atualiza o DataGridView com os resultados filtrados
-                dataGridView1.DataSource = resultadosFiltrados;
-            }
-            else
-            {
-                // Se a caixa de busca estiver vazia, exibe todos os dados originais
-                dataGridView1.DataSource = dadosOriginais;
-            }
+            // ... (código do método btnBuscar_Click)
         }
 
         // Método executado ao clicar no botão
