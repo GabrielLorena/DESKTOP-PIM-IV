@@ -31,8 +31,8 @@
             button1 = new Button();
             label1 = new Label();
             label2 = new Label();
-            user = new TextBox();
-            pass = new TextBox();
+            txtUser = new TextBox();
+            txtPass = new TextBox();
             groupBox1 = new GroupBox();
             pictureBox1 = new PictureBox();
             button2 = new Button();
@@ -78,31 +78,31 @@
             label2.Text = "Senha";
             label2.Click += label2_Click;
             // 
-            // user
+            // txtUser
             // 
-            user.Cursor = Cursors.IBeam;
-            user.Location = new Point(107, 29);
-            user.Name = "user";
-            user.Size = new Size(100, 23);
-            user.TabIndex = 3;
-            user.TextChanged += UsertextBox_TextChanged;
+            txtUser.Cursor = Cursors.IBeam;
+            txtUser.Location = new Point(107, 29);
+            txtUser.Name = "txtUser";
+            txtUser.Size = new Size(100, 23);
+            txtUser.TabIndex = 3;
+            txtUser.TextChanged += UsertextBox_TextChanged;
             // 
-            // pass
+            // txtPass
             // 
-            pass.Location = new Point(107, 75);
-            pass.Name = "pass";
-            pass.PasswordChar = '*';
-            pass.Size = new Size(100, 23);
-            pass.TabIndex = 4;
+            txtPass.Location = new Point(107, 75);
+            txtPass.Name = "txtPass";
+            txtPass.PasswordChar = '*';
+            txtPass.Size = new Size(100, 23);
+            txtPass.TabIndex = 4;
             // 
             // groupBox1
             // 
             groupBox1.BackColor = SystemColors.Control;
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(pass);
+            groupBox1.Controls.Add(txtPass);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(user);
+            groupBox1.Controls.Add(txtUser);
             groupBox1.Location = new Point(437, 122);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(299, 164);
@@ -192,8 +192,8 @@
         private Button button1;
         private Label label1;
         private Label label2;
-        private TextBox user;
-        private TextBox pass;
+        private TextBox txtUser;
+        private TextBox txtPass;
         private GroupBox groupBox1;
         private PictureBox pictureBox1;
         private Button button2;
