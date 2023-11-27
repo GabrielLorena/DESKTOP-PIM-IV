@@ -42,7 +42,7 @@
             txtImposto = new TextBox();
             txtBonus = new TextBox();
             txtHorasTra = new TextBox();
-            txtDataVi = new TextBox();
+            txtDataVi = new DateTimePicker();
             SuspendLayout();
             // 
             // button1
@@ -166,10 +166,11 @@
             // 
             // txtDataVi
             // 
-            txtDataVi.Location = new Point(415, 242);
+            txtDataVi.Format = DateTimePickerFormat.Short;
+            txtDataVi.Location = new Point(413, 236);
             txtDataVi.Name = "txtDataVi";
-            txtDataVi.Size = new Size(100, 23);
-            txtDataVi.TabIndex = 49;
+            txtDataVi.Size = new Size(96, 23);
+            txtDataVi.TabIndex = 50;
             // 
             // Cadastro_FolhaPagamento
             // 
@@ -213,6 +214,6 @@
         private TextBox txtImposto;
         private TextBox txtBonus;
         private TextBox txtHorasTra;
-        private TextBox txtDataVi;
+        private DateTimePicker txtDataVi;
     }
 }

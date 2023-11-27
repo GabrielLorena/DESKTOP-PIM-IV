@@ -57,7 +57,7 @@ namespace FolhaPagamento
             public string Imposto { get; set; }
             public string HorasTrabalhadas { get; set; }
             public string Bonus { get; set; }
-            public string data_vigencia { get; set; }
+            public DateTime Data_Vigencia { get; set; }
         }
 
         // Método executado ao clicar no botão de busca

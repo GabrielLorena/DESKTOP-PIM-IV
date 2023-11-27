@@ -33,7 +33,7 @@ namespace FolhaPagamento
                 imposto = txtImposto.Text,
                 horasTrabalhadas = txtHorasTra.Text,
                 bonus = txtBonus.Text,
-                data_vigencia = txtDataVi.Text,
+                data_vigencia = Convert.ToDateTime(txtDataVi.Text),
             };
 
             // Converter o objeto Funcionario para JSON

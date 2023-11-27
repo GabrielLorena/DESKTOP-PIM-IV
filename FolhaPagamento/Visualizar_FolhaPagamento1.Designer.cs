@@ -33,8 +33,6 @@
             label1 = new Label();
             label14 = new Label();
             label2 = new Label();
-            btnEnviar_Click = new Button();
-            label3 = new Label();
             txtProcurar = new TextBox();
             btnBuscar = new Button();
             dataGridView1 = new DataGridView();
@@ -77,25 +75,6 @@
             label2.Size = new Size(727, 1);
             label2.TabIndex = 37;
             // 
-            // btnEnviar_Click
-            // 
-            btnEnviar_Click.Location = new Point(677, 445);
-            btnEnviar_Click.Name = "btnEnviar_Click";
-            btnEnviar_Click.Size = new Size(96, 23);
-            btnEnviar_Click.TabIndex = 38;
-            btnEnviar_Click.Text = "Comprovante";
-            btnEnviar_Click.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(202, 100);
-            label3.Name = "label3";
-            label3.Size = new Size(49, 19);
-            label3.TabIndex = 41;
-            label3.Text = "Buscar";
-            // 
             // txtProcurar
             // 
             txtProcurar.Location = new Point(267, 100);
@@ -118,9 +97,12 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(37, 143);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(727, 249);
             dataGridView1.TabIndex = 44;
@@ -133,8 +115,6 @@
             Controls.Add(dataGridView1);
             Controls.Add(btnBuscar);
             Controls.Add(txtProcurar);
-            Controls.Add(label3);
-            Controls.Add(btnEnviar_Click);
             Controls.Add(label2);
             Controls.Add(label14);
             Controls.Add(label1);
@@ -152,8 +132,6 @@
         private Label label1;
         private Label label14;
         private Label label2;
-        private Button btnEnviar_Click;
-        private Label label3;
         private TextBox txtProcurar;
         private Button btnBuscar;
         private DataGridView dataGridView1;
