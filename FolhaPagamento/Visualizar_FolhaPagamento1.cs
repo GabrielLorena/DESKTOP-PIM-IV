@@ -58,6 +58,8 @@ namespace FolhaPagamento
             public string HorasTrabalhadas { get; set; }
             public string Bonus { get; set; }
             public DateTime Data_Vigencia { get; set; }
+            public string NomeFunc { get; set; }
+
         }
 
         // Método executado ao clicar no botão de busca
@@ -70,6 +72,7 @@ namespace FolhaPagamento
                 // Filtra os dados originais com base no termo de busca
                 List<SeuObjeto> resultadosFiltrados = dadosOriginais
                     .Where(o =>
+                        o.NomeFunc.ToLower().Contains(termoBusca) ||
                         o.Funcionario.ToLower().Contains(termoBusca) ||
                         o.Imposto.ToLower().Contains(termoBusca) ||
                         o.HorasTrabalhadas.ToLower().Contains(termoBusca) ||

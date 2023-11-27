@@ -18,7 +18,7 @@ namespace FolhaPagamento
 {
     public partial class Tela_Login : Form
     {
-        private const string apiUrl = "https://pimbackend.onrender.com/auth/login"; // Substitua pela URL da sua API
+        private const string apiUrl = "https://pimbackend.onrender.com/auth/login"; // URL da sua API
         public Tela_Login()
         {
             InitializeComponent();

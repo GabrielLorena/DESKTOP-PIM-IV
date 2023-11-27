@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MU/HTAcOmIA9263raHY/p0ir+v/gfXr3MKvGtUKxRO5WrXIJY/T0M9EOCxO4pt3NGjbZkIu7i3I9x3flOTGSiw==",
+  "dgSpecHash": "mBz8FwK7u7aI4wK2eP2OOY8zaEnEWDbLxy+8ifmcsJC8B2vP8ZuZVAb7yH4PvBZFzekaH7LO8VAYX7mcQeqiMw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\eduvi\\OneDrive\\Área de Trabalho\\test\\DESKTOP-PIM-IV\\FolhaPagamento\\FolhaPagamento.csproj",
+  "projectFilePath": "C:\\Users\\eduvi\\OneDrive\\Área de Trabalho\\DESKTOP-PIM-IV\\FolhaPagamento\\FolhaPagamento.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eduvi\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
     "C:\\Users\\eduvi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
