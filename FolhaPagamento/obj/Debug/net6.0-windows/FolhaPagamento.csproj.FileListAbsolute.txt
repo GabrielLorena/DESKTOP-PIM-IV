@@ -195,3 +195,4 @@ C:\Users\Gabriel\Desktop\DESKTOP-PIM-IV\FolhaPagamento\obj\Debug\net6.0-windows\
 C:\Users\Gabriel\Desktop\DESKTOP-PIM-IV\FolhaPagamento\obj\Debug\net6.0-windows\FolhaPagamento.genruntimeconfig.cache
 C:\Users\Gabriel\Desktop\DESKTOP-PIM-IV\FolhaPagamento\obj\Debug\net6.0-windows\ref\FolhaPagamento.dll
 C:\Users\Gabriel\Desktop\DESKTOP-PIM-IV\FolhaPagamento\obj\Debug\net6.0-windows\FolhaPagamento.sourcelink.json
+C:\Users\eduvi\OneDrive\Área de Trabalho\DESKTOP-PIM-IV\FolhaPagamento\obj\Debug\net6.0-windows\FolhaPagamento.sourcelink.json

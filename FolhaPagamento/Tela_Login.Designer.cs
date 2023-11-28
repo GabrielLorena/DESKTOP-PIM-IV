@@ -30,24 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_Login));
             button1 = new Button();
-            label1 = new Label();
-            label2 = new Label();
             txtUser = new TextBox();
             txtPass = new TextBox();
-            groupBox1 = new GroupBox();
-            label5 = new Label();
+            button5 = new Button();
+            button3 = new Button();
             button2 = new Button();
             label14 = new Label();
-            label3 = new Label();
             label4 = new Label();
-            groupBox1.SuspendLayout();
+            pictureBox1 = new PictureBox();
+            label2 = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
             button1.BackColor = SystemColors.Control;
             button1.Cursor = Cursors.Hand;
-            button1.Location = new Point(184, 183);
+            button1.FlatAppearance.BorderColor = Color.MediumSlateBlue;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.MediumSlateBlue;
+            button1.Location = new Point(335, 281);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 0;
@@ -55,104 +57,104 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = SystemColors.Control;
-            label1.Location = new Point(122, 87);
-            label1.Name = "label1";
-            label1.Size = new Size(47, 15);
-            label1.TabIndex = 1;
-            label1.Text = "Usuario";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = SystemColors.Control;
-            label2.Location = new Point(130, 143);
-            label2.Name = "label2";
-            label2.Size = new Size(39, 15);
-            label2.TabIndex = 2;
-            label2.Text = "Senha";
-            // 
             // txtUser
             // 
+            txtUser.BorderStyle = BorderStyle.FixedSingle;
             txtUser.Cursor = Cursors.IBeam;
-            txtUser.Location = new Point(175, 84);
+            txtUser.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            txtUser.ForeColor = Color.MediumSlateBlue;
+            txtUser.Location = new Point(326, 182);
             txtUser.Name = "txtUser";
             txtUser.Size = new Size(100, 23);
             txtUser.TabIndex = 3;
+            txtUser.TextAlign = HorizontalAlignment.Center;
             // 
             // txtPass
             // 
-            txtPass.Location = new Point(175, 135);
+            txtPass.BorderStyle = BorderStyle.FixedSingle;
+            txtPass.Cursor = Cursors.IBeam;
+            txtPass.Location = new Point(326, 233);
             txtPass.Name = "txtPass";
-            txtPass.PasswordChar = '*';
+            txtPass.PasswordChar = '•';
             txtPass.Size = new Size(100, 23);
             txtPass.TabIndex = 4;
+            txtPass.TextAlign = HorizontalAlignment.Center;
             // 
-            // groupBox1
+            // button5
             // 
-            groupBox1.BackColor = SystemColors.Control;
-            groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(button1);
-            groupBox1.Controls.Add(txtPass);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(txtUser);
-            groupBox1.Location = new Point(124, 99);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(457, 231);
-            groupBox1.TabIndex = 5;
-            groupBox1.TabStop = false;
+            button5.BackColor = Color.Transparent;
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Image = (Image)resources.GetObject("button5.Image");
+            button5.Location = new Point(287, 226);
+            button5.Name = "button5";
+            button5.Size = new Size(33, 32);
+            button5.TabIndex = 43;
+            button5.UseVisualStyleBackColor = false;
             // 
-            // label5
+            // button3
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(184, 19);
-            label5.Name = "label5";
-            label5.Size = new Size(74, 30);
-            label5.TabIndex = 40;
-            label5.Text = "LOGIN";
+            button3.BackColor = Color.Transparent;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.Location = new Point(287, 175);
+            button3.Name = "button3";
+            button3.Size = new Size(33, 32);
+            button3.TabIndex = 41;
+            button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
+            button2.BackColor = Color.MediumSlateBlue;
             button2.BackgroundImageLayout = ImageLayout.Center;
-            button2.FlatStyle = FlatStyle.Popup;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
             button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.Location = new Point(763, 0);
+            button2.Location = new Point(763, -3);
             button2.Name = "button2";
-            button2.Size = new Size(37, 23);
+            button2.Size = new Size(37, 35);
             button2.TabIndex = 7;
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // label14
             // 
+            label14.BackColor = Color.MediumSlateBlue;
             label14.BorderStyle = BorderStyle.FixedSingle;
-            label14.Location = new Point(11, 66);
+            label14.Location = new Point(-1, -3);
             label14.Name = "label14";
-            label14.Size = new Size(727, 1);
+            label14.Size = new Size(801, 35);
             label14.TabIndex = 37;
-            // 
-            // label3
-            // 
-            label3.BorderStyle = BorderStyle.FixedSingle;
-            label3.Location = new Point(11, 367);
-            label3.Name = "label3";
-            label3.Size = new Size(727, 1);
-            label3.TabIndex = 38;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(12, 19);
+            label4.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(326, 131);
             label4.Name = "label4";
-            label4.Size = new Size(106, 30);
+            label4.Size = new Size(114, 30);
             label4.TabIndex = 39;
             label4.Text = "iStorm RH";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(279, 131);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(32, 32);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 44;
+            pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            label2.BackColor = Color.MediumSlateBlue;
+            label2.BorderStyle = BorderStyle.FixedSingle;
+            label2.Location = new Point(-1, 416);
+            label2.Name = "label2";
+            label2.Size = new Size(801, 35);
+            label2.TabIndex = 46;
             // 
             // Tela_Login
             // 
@@ -160,19 +162,25 @@
             BackColor = SystemColors.Control;
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(800, 450);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label14);
+            Controls.Add(label2);
             Controls.Add(button2);
-            Controls.Add(groupBox1);
+            Controls.Add(pictureBox1);
+            Controls.Add(button5);
+            Controls.Add(label4);
+            Controls.Add(button3);
+            Controls.Add(label14);
+            Controls.Add(button1);
+            Controls.Add(txtPass);
+            Controls.Add(txtUser);
+            ForeColor = Color.MediumSlateBlue;
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Tela_Login";
             RightToLeft = RightToLeft.No;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "iStorm RH";
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            Load += Tela_Login_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -180,15 +188,14 @@
         #endregion
 
         private Button button1;
-        private Label label1;
-        private Label label2;
         private TextBox txtUser;
         private TextBox txtPass;
-        private GroupBox groupBox1;
         private Button button2;
         private Label label14;
-        private Label label3;
         private Label label4;
-        private Label label5;
+        private Button button5;
+        private Button button3;
+        private PictureBox pictureBox1;
+        private Label label2;
     }
 }

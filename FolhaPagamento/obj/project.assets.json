@@ -281,19 +281,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gabriel\\.nuget\\packages\\": {}
+    "C:\\Users\\eduvi\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gabriel\\Desktop\\DESKTOP-PIM-IV\\FolhaPagamento\\FolhaPagamento.csproj",
+      "projectUniqueName": "C:\\Users\\eduvi\\OneDrive\\Área de Trabalho\\DESKTOP-PIM-IV\\FolhaPagamento\\FolhaPagamento.csproj",
       "projectName": "FolhaPagamento",
-      "projectPath": "C:\\Users\\Gabriel\\Desktop\\DESKTOP-PIM-IV\\FolhaPagamento\\FolhaPagamento.csproj",
-      "packagesPath": "C:\\Users\\Gabriel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gabriel\\Desktop\\DESKTOP-PIM-IV\\FolhaPagamento\\obj\\",
+      "projectPath": "C:\\Users\\eduvi\\OneDrive\\Área de Trabalho\\DESKTOP-PIM-IV\\FolhaPagamento\\FolhaPagamento.csproj",
+      "packagesPath": "C:\\Users\\eduvi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\eduvi\\OneDrive\\Área de Trabalho\\DESKTOP-PIM-IV\\FolhaPagamento\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Gabriel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\eduvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

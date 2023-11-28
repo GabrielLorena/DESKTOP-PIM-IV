@@ -1,17 +1,15 @@
 namespace FolhaPagamento
 {
-    internal static class Programa
+    internal static class Program
     {
         /// <summary>
-        /// Ponto de entrada principal para a aplicação.
+        ///  The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Principal()
+        static void Main()
         {
-            // Para personalizar a configuração da aplicação, como definir configurações de DPI ou fonte padrão,
-            // veja https://aka.ms/applicationconfiguration.
-
-            // Altere a linha abaixo para iniciar o formulário de login da sua aplicação.
+            // To customize application configuration such as set high DPI settings or default font,
+            // see https://aka.ms/applicationconfiguration. 
             Application.Run(new Tela_Login());
         }
     }

@@ -99,6 +99,11 @@ namespace FolhaPagamento
             Application.Exit();
         }
 
+        private void Tela_Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
         // Outros métodos relacionados a eventos e UI podem ser documentados conforme necessário
     }
 }
