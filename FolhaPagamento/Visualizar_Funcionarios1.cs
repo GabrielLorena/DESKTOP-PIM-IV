@@ -76,7 +76,9 @@ namespace FolhaPagamento
                         o.Nome.ToLower().Contains(termoBusca) ||
                         o.Cargo.ToLower().Contains(termoBusca) ||
                         o.Cpf.ToLower().Contains(termoBusca) ||
-                        o.Departamento.ToLower().Contains(termoBusca)
+                        o.Departamento.ToLower().Contains(termoBusca) ||
+                        o.DtAdmissao.ToString("dd/MM/yyyy").Contains(termoBusca) ||
+                        o.DataNascimento.ToString("dd/MM/yyyy").Contains(termoBusca)
                     // Adicione outras propriedades que deseja incluir no filtro
                     )
                     .ToList();
@@ -118,6 +120,11 @@ namespace FolhaPagamento
                 // Se já estiver aberta, traz para a frente
                 formLogin.BringToFront();
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -113,5 +113,10 @@ namespace FolhaPagamento
                 MessageBox.Show("Ocorreu um erro ao cadastrar a folha de pagamento: " + ex.Message);
             }
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

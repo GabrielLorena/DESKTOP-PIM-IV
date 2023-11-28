@@ -49,11 +49,11 @@
             button1.FlatAppearance.BorderColor = Color.MediumSlateBlue;
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.MediumSlateBlue;
-            button1.Location = new Point(335, 281);
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(340, 262);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 0;
-            button1.Text = "Entrar";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click_1;
             // 
@@ -67,7 +67,6 @@
             txtUser.Name = "txtUser";
             txtUser.Size = new Size(100, 23);
             txtUser.TabIndex = 3;
-            txtUser.TextAlign = HorizontalAlignment.Center;
             // 
             // txtPass
             // 
@@ -78,7 +77,6 @@
             txtPass.PasswordChar = '•';
             txtPass.Size = new Size(100, 23);
             txtPass.TabIndex = 4;
-            txtPass.TextAlign = HorizontalAlignment.Center;
             // 
             // button5
             // 

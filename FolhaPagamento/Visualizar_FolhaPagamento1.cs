@@ -122,5 +122,40 @@ namespace FolhaPagamento
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            string termoBusca = txtProcurar.Text.ToLower(); // Obtém o termo de busca em letras minúsculas
+
+            if (!string.IsNullOrWhiteSpace(termoBusca)) // Se o termo de busca não estiver vazio
+            {
+                // Filtra os dados originais com base no termo de busca
+                List<SeuObjeto> resultadosFiltrados = dadosOriginais
+                    .Where(o =>
+                        o.Funcionario.ToLower().Contains(termoBusca) ||
+                        o.Imposto.ToLower().Contains(termoBusca) ||
+                        o.HorasTrabalhadas.ToLower().Contains(termoBusca) ||
+                        o.Bonus.ToLower().Contains(termoBusca) ||
+                        o.Data_Vigencia.ToString("dd/MM/yyyy").Contains(termoBusca) ||
+                        o.NomeFunc.ToLower().Contains(termoBusca)
+
+                    // Adicione outras propriedades que deseja incluir no filtro
+                    )
+                    .ToList();
+
+                // Atualiza o DataGridView com os resultados filtrados
+                dataGridView1.DataSource = resultadosFiltrados;
+            }
+            else
+            {
+                // Se a caixa de busca estiver vazia, exibe todos os dados originais
+                dataGridView1.DataSource = dadosOriginais;
+            }
+        }
     }
 }

@@ -54,6 +54,7 @@
             label10 = new Label();
             label11 = new Label();
             pictureBox1 = new PictureBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)txtSalario).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -313,11 +314,26 @@
             pictureBox1.TabIndex = 45;
             pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.MediumSlateBlue;
+            button1.BackgroundImageLayout = ImageLayout.Center;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(763, -2);
+            button1.Name = "button1";
+            button1.Size = new Size(37, 35);
+            button1.TabIndex = 46;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // iStorm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(pictureBox1);
             Controls.Add(label11);
             Controls.Add(btnEnviar_Click);
@@ -381,5 +397,6 @@
         private Label label10;
         private Label label11;
         private PictureBox pictureBox1;
+        private Button button1;
     }
 }

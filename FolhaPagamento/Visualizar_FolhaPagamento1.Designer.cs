@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Visualizar_FolhaPagamento1));
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             button1 = new Button();
             txtProcurar = new TextBox();
             btnBuscar = new Button();
@@ -50,9 +52,9 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(-1, 415);
+            button1.Location = new Point(0, 468);
             button1.Name = "button1";
-            button1.Size = new Size(75, 35);
+            button1.Size = new Size(75, 37);
             button1.TabIndex = 0;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
@@ -80,19 +82,36 @@
             btnBuscar.Size = new Size(49, 27);
             btnBuscar.TabIndex = 43;
             btnBuscar.UseVisualStyleBackColor = false;
+            btnBuscar.Click += btnBuscar_Click_1;
             // 
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.BackgroundColor = SystemColors.Control;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Cursor = Cursors.IBeam;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.MediumSlateBlue;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.GridColor = Color.MediumSlateBlue;
             dataGridView1.Location = new Point(12, 145);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.RowTemplate.ReadOnly = true;
+            dataGridView1.RowTemplate.Resizable = DataGridViewTriState.False;
             dataGridView1.Size = new Size(776, 253);
             dataGridView1.TabIndex = 44;
             // 
@@ -101,19 +120,19 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.MediumSlateBlue;
-            label3.Location = new Point(230, 47);
+            label3.Location = new Point(248, 47);
             label3.Name = "label3";
-            label3.Size = new Size(306, 30);
+            label3.Size = new Size(223, 30);
             label3.TabIndex = 54;
-            label3.Text = "Cadastro Folha de Pagamento";
+            label3.Text = "Folhas de Pagamento";
             // 
             // label8
             // 
             label8.BackColor = Color.MediumSlateBlue;
             label8.BorderStyle = BorderStyle.FixedSingle;
-            label8.Location = new Point(-1, 415);
+            label8.Location = new Point(0, 468);
             label8.Name = "label8";
-            label8.Size = new Size(801, 35);
+            label8.Size = new Size(800, 42);
             label8.TabIndex = 55;
             // 
             // label1
@@ -122,7 +141,7 @@
             label1.BorderStyle = BorderStyle.FixedSingle;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(801, 35);
+            label1.Size = new Size(813, 35);
             label1.TabIndex = 56;
             // 
             // pictureBox1
@@ -147,14 +166,12 @@
             button2.Size = new Size(37, 35);
             button2.TabIndex = 58;
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // Visualizar_FolhaPagamento1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            AutoSize = true;
-            AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ClientSize = new Size(800, 450);
+            AutoScaleMode = AutoScaleMode.None;
+            ClientSize = new Size(800, 505);
             Controls.Add(button2);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
