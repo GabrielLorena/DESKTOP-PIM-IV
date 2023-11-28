@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-using System.Text.Json;
-using Microsoft.VisualBasic.ApplicationServices;
-using Newtonsoft.Json.Linq;
-using System.Net.Http;
 using Newtonsoft.Json;
 
 namespace FolhaPagamento
@@ -19,92 +10,69 @@ namespace FolhaPagamento
     public partial class Tela_Login : Form
     {
         private const string apiUrl = "https://pimbackend.onrender.com/auth/login"; // URL da sua API
+
         public Tela_Login()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void UsertextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void LimparCampos()
-        {
-            // Limpar os campos do formulário após o cadastro
-            txtUser.Text = string.Empty;
-            txtPass.Text = string.Empty;
-
-            // Limpar outros campos conforme necessário
-        }
-
+        // Método executado ao clicar no botão "Entrar"
         private async void button1_Click_1(object sender, EventArgs e)
         {
-            var dados = new
+            try
             {
-                email = txtUser.Text,
-                senha = txtPass.Text,
-            };
-            var dadosJson = Newtonsoft.Json.JsonConvert.SerializeObject(dados);
-
-            // Enviar a solicitação POST para a API
-            using (var httpClient = new HttpClient())
-            {
-                var content = new StringContent(dadosJson, Encoding.UTF8, "application/json");
-
-                var response = await httpClient.PostAsync(apiUrl, content);
-
-
-                // response.IsSuccessStatusCode
-                if (response.IsSuccessStatusCode)
+                // Constrói o objeto com os dados do usuário
+                var dados = new
                 {
-                    var respostaConteudo = await response.Content.ReadAsStringAsync();
-                    dynamic json = JsonConvert.DeserializeObject(respostaConteudo);
+                    email = txtUser.Text,
+                    senha = txtPass.Text,
+                };
 
-                    // Supondo que 'result' contenha a resposta do servidor
-                    // string tipoUsuario = await response.Content.tipo;
+                // Serializa o objeto para formato JSON
+                var dadosJson = JsonConvert.SerializeObject(dados);
 
+                // Enviar a solicitação POST para a API
+                using (var httpClient = new HttpClient())
+                {
+                    var content = new StringContent(dadosJson, Encoding.UTF8, "application/json");
 
-                    if (json.tipo == 2) 
+                    var response = await httpClient.PostAsync(apiUrl, content);
+
+                    // Verifica se a resposta foi bem-sucedida
+                    if (response.IsSuccessStatusCode)
                     {
-                        // Login bem-sucedido
-                        MostrarMensagemStatus("Status do login: Sucesso.");
+                        // Lê o conteúdo da resposta como uma string JSON
+                        var respostaConteudo = await response.Content.ReadAsStringAsync();
+                        dynamic json = JsonConvert.DeserializeObject(respostaConteudo);
 
+                        // Verifica o tipo de usuário retornado pela API
+                        if (json.tipo == 2)
+                        {
+                            // Login bem-sucedido
+                            MostrarMensagemStatus("Status do login: Sucesso.");
 
-                        //Oculta o formulário de login e exibe o formulário inicial
-                        this.Hide();
-                        Tela_Inicial formInicial = new Tela_Inicial();
-                        formInicial.ShowDialog();
+                            // Oculta o formulário de login e exibe o formulário inicial
+                            this.Hide();
+                            Tela_Inicial formInicial = new Tela_Inicial();
+                            formInicial.ShowDialog();
+                        }
+                        else
+                        {
+                            // Login falhou
+                            MostrarMensagemStatus("Status do login: Falha. Apenas gerentes de departamento podem acessar!.");
+                        }
+
+                        LimparCampos(); // Limpa os campos do formulário após o login
                     }
                     else
                     {
-                        // Login falhou
-                        MostrarMensagemStatus("Status do login: Falha. Apenas gerentes de departamento podem acessar!.");
+                        MessageBox.Show("Status do login: Falha Usuario nao cadastrado.");
                     }
-                    LimparCampos();
                 }
-                else
-                {
-                    MessageBox.Show("Erro ao cadastrar o funcionário.");
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex.Message);
             }
         }
 
@@ -114,20 +82,23 @@ namespace FolhaPagamento
             MessageBox.Show(mensagem, "Mensagem de Status", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        // Método para limpar os campos do formulário
+        private void LimparCampos()
+        {
+            // Limpar os campos do formulário após o cadastro
+            txtUser.Text = string.Empty;
+            txtPass.Text = string.Empty;
+
+            // Limpar outros campos conforme necessário
+        }
+
+        // Método executado ao clicar no botão "Sair"
         private void button2_Click(object sender, EventArgs e)
         {
             // Fechar o aplicativo quando o botão de saída for clicado
             Application.Exit();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
+        // Outros métodos relacionados a eventos e UI podem ser documentados conforme necessário
     }
 }

@@ -122,8 +122,9 @@
             Controls.Add(label1);
             Controls.Add(button1);
             Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Visualizar_Funcionarios1";
-            Text = "iStorm";
+            Text = "iStorm RH";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

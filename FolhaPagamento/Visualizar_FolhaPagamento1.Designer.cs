@@ -119,8 +119,9 @@
             Controls.Add(label14);
             Controls.Add(label1);
             Controls.Add(button1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Visualizar_FolhaPagamento1";
-            Text = "iStorm";
+            Text = "iStorm RH";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

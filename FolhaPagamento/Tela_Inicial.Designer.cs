@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_Inicial));
             label1 = new Label();
             label14 = new Label();
             label6 = new Label();
@@ -52,7 +53,6 @@
             label1.Size = new Size(168, 25);
             label1.TabIndex = 0;
             label1.Text = "SEJA BEM-VINDO";
-            label1.Click += label1_Click;
             // 
             // label14
             // 
@@ -82,6 +82,7 @@
             // 
             // btnAcessarCadastro
             // 
+            btnAcessarCadastro.BackgroundImageLayout = ImageLayout.None;
             btnAcessarCadastro.Location = new Point(6, 22);
             btnAcessarCadastro.Name = "btnAcessarCadastro";
             btnAcessarCadastro.Size = new Size(161, 23);
@@ -145,17 +146,18 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Black", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(290, 50);
+            label2.Font = new Font("Segoe UI Black", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(300, 46);
             label2.Name = "label2";
-            label2.Size = new Size(139, 17);
+            label2.Size = new Size(108, 25);
             label2.TabIndex = 46;
-            label2.Text = "NOME DA EMPRESA";
+            label2.Text = "iStorm RH";
             // 
             // Tela_Inicial
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(800, 450);
             Controls.Add(label2);
             Controls.Add(groupBox1);
@@ -164,8 +166,9 @@
             Controls.Add(label6);
             Controls.Add(label14);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Tela_Inicial";
-            Text = "iStorm";
+            Text = "iStorm RH";
             Load += Tela_Inicial_Load;
             Funcionarios.ResumeLayout(false);
             groupBox1.ResumeLayout(false);

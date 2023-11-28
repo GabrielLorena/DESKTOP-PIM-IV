@@ -14,9 +14,15 @@ namespace FolhaPagamento
     public partial class Cadastro_FolhaPagamento : Form
     {
         private const string apiUrl = "https://pimbackend.onrender.com/folhas_pagamento"; // Substitua pela URL da sua API
+
+        public Cadastro_FolhaPagamento()
+        {
+            InitializeComponent();
+        }
+
+        // Método para limpar os campos do formulário após o cadastro
         private void LimparCampos()
         {
-            // Limpar os campos do formulário após o cadastro
             txtFuncionario.Text = string.Empty;
             txtImposto.Text = string.Empty;
             txtHorasTra.Text = string.Empty;
@@ -24,43 +30,50 @@ namespace FolhaPagamento
             txtDataVi.Text = string.Empty;
             // Limpar outros campos conforme necessário
         }
+
+        // Método executado ao clicar no botão "Enviar"
         private async void btnEnviar_Click_Click(object sender, EventArgs e)
         {
-            // Criar objeto Funcionario com base nos dados do formulário
-            var novoFolhaPagamento = new
+            try
             {
-                funcionario = txtFuncionario.Text,
-                imposto = txtImposto.Text,
-                horasTrabalhadas = txtHorasTra.Text,
-                bonus = txtBonus.Text,
-                data_vigencia = Convert.ToDateTime(txtDataVi.Text),
-            };
-
-            // Converter o objeto Funcionario para JSON
-            var jsonFolhaPagamento = Newtonsoft.Json.JsonConvert.SerializeObject(novoFolhaPagamento);
-
-            // Enviar a solicitação POST para a API
-            using (var httpClient = new HttpClient())
-            {
-                var content = new StringContent(jsonFolhaPagamento, Encoding.UTF8, "application/json");
-                var response = await httpClient.PostAsync(apiUrl, content);
-
-                if (response.IsSuccessStatusCode)
+                // Cria um objeto FolhaPagamento com base nos dados do formulário
+                var novaFolhaPagamento = new
                 {
-                    MessageBox.Show("Folha de Pagamento cadastrado com sucesso!");
-                    LimparCampos();
-                }
-                else
+                    funcionario = txtFuncionario.Text,
+                    imposto = txtImposto.Text,
+                    horasTrabalhadas = txtHorasTra.Text,
+                    bonus = txtBonus.Text,
+                    data_vigencia = Convert.ToDateTime(txtDataVi.Text),
+                };
+
+                // Converte o objeto FolhaPagamento para JSON
+                var jsonFolhaPagamento = Newtonsoft.Json.JsonConvert.SerializeObject(novaFolhaPagamento);
+
+                // Envia a solicitação POST para a API
+                using (var httpClient = new HttpClient())
                 {
-                    MessageBox.Show("Erro ao cadastrar Folha de Pagamento.");
+                    var content = new StringContent(jsonFolhaPagamento, Encoding.UTF8, "application/json");
+                    var response = await httpClient.PostAsync(apiUrl, content);
+
+                    // Verifica se a resposta foi bem-sucedida
+                    if (response.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("Folha de Pagamento cadastrada com sucesso!");
+                        LimparCampos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erro ao cadastrar Folha de Pagamento.");
+                    }
                 }
             }
-        }
-        public Cadastro_FolhaPagamento()
-        {
-            InitializeComponent();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex.Message);
+            }
         }
 
+        // Método executado ao clicar no botão "Voltar"
         private void button1_Click(object sender, EventArgs e)
         {
             // Fecha todas as instâncias da tela atual

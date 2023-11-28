@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro_FolhaPagamento));
             button1 = new Button();
             btnEnviar_Click = new Button();
             label14 = new Label();
@@ -94,7 +95,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(306, 109);
+            label3.Location = new Point(265, 115);
             label3.Name = "label3";
             label3.Size = new Size(70, 15);
             label3.TabIndex = 39;
@@ -103,7 +104,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(306, 139);
+            label4.Location = new Point(265, 145);
             label4.Name = "label4";
             label4.Size = new Size(51, 15);
             label4.TabIndex = 40;
@@ -112,7 +113,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(306, 172);
+            label5.Location = new Point(265, 178);
             label5.Name = "label5";
             label5.Size = new Size(103, 15);
             label5.TabIndex = 41;
@@ -121,7 +122,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(306, 210);
+            label6.Location = new Point(265, 216);
             label6.Name = "label6";
             label6.Size = new Size(40, 15);
             label6.TabIndex = 42;
@@ -130,7 +131,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(306, 242);
+            label7.Location = new Point(265, 248);
             label7.Name = "label7";
             label7.Size = new Size(79, 15);
             label7.TabIndex = 43;
@@ -138,28 +139,28 @@
             // 
             // txtFuncionario
             // 
-            txtFuncionario.Location = new Point(415, 101);
+            txtFuncionario.Location = new Point(374, 107);
             txtFuncionario.Name = "txtFuncionario";
             txtFuncionario.Size = new Size(159, 23);
             txtFuncionario.TabIndex = 44;
             // 
             // txtImposto
             // 
-            txtImposto.Location = new Point(415, 131);
+            txtImposto.Location = new Point(374, 137);
             txtImposto.Name = "txtImposto";
             txtImposto.Size = new Size(100, 23);
             txtImposto.TabIndex = 45;
             // 
             // txtBonus
             // 
-            txtBonus.Location = new Point(415, 202);
+            txtBonus.Location = new Point(374, 208);
             txtBonus.Name = "txtBonus";
             txtBonus.Size = new Size(100, 23);
             txtBonus.TabIndex = 47;
             // 
             // txtHorasTra
             // 
-            txtHorasTra.Location = new Point(415, 169);
+            txtHorasTra.Location = new Point(374, 175);
             txtHorasTra.Name = "txtHorasTra";
             txtHorasTra.Size = new Size(100, 23);
             txtHorasTra.TabIndex = 48;
@@ -167,7 +168,7 @@
             // txtDataVi
             // 
             txtDataVi.Format = DateTimePickerFormat.Short;
-            txtDataVi.Location = new Point(413, 236);
+            txtDataVi.Location = new Point(372, 242);
             txtDataVi.Name = "txtDataVi";
             txtDataVi.Size = new Size(96, 23);
             txtDataVi.TabIndex = 50;
@@ -192,8 +193,9 @@
             Controls.Add(label14);
             Controls.Add(btnEnviar_Click);
             Controls.Add(button1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Cadastro_FolhaPagamento";
-            Text = "iStorm";
+            Text = "iStorm RH";
             ResumeLayout(false);
             PerformLayout();
         }

@@ -14,53 +14,18 @@ namespace FolhaPagamento
         {
             InitializeComponent();
         }
+
+        // Evento de carregamento do formulário
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            // Código associado ao carregamento do formulário, se necessário
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
+        // Métodos associados às mudanças em TextBoxes e outros controles, se necessário
 
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private async void BtnEnviar_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        // Método para limpar os campos do formulário após o cadastro
         private void LimparCampos()
         {
-            // Limpar os campos do formulário após o cadastro
             txtNome.Text = string.Empty;
             txtCPF.Text = string.Empty;
             txtTelefone.Text = string.Empty;
@@ -73,70 +38,73 @@ namespace FolhaPagamento
             // Limpar outros campos conforme necessário
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        // Método executado ao clicar no botão "Enviar"
         private async void btnEnviar_Click_Click(object sender, EventArgs e)
         {
-            int cdDepartamento = 1;
-            switch (txtDepartamento.Text)
+            try
             {
-                case "Operacional":
-                    cdDepartamento = 1;
-                    break;
-                case "Gestao":
-                    cdDepartamento = 2;
-                    break;
-                case "Administrativo":
-                    cdDepartamento = 3;
-                    break;
-                case "RH":
-                    cdDepartamento = 4;
-                    break;
+                int cdDepartamento = 1;
+
+                // Mapeia o nome do departamento para um código específico
+                switch (txtDepartamento.Text)
+                {
+                    case "Operacional":
+                        cdDepartamento = 1;
+                        break;
+                    case "Gestao":
+                        cdDepartamento = 2;
+                        break;
+                    case "Administrativo":
+                        cdDepartamento = 3;
+                        break;
+                    case "RH":
+                        cdDepartamento = 4;
+                        break;
+                }
+
+                // Cria um objeto Funcionario com base nos dados do formulário
+                var novoFuncionario = new
+                {
+                    nome = txtNome.Text,
+                    cpf = txtCPF.Text,
+                    telefone = txtTelefone.Text,
+                    endereco = txtEndereco.Text,
+                    salario = Convert.ToDecimal(txtSalario.Text),
+                    dtAdmissao = Convert.ToDateTime(txtDataAdmissao.Text),
+                    departamento = cdDepartamento,
+                    dataNascimento = Convert.ToDateTime(txtDataNascimento.Text),
+                    cargo = txtCargo.Text
+                    // Adicione outros campos conforme necessário
+                };
+
+                // Converte o objeto Funcionario para JSON
+                var jsonFuncionario = Newtonsoft.Json.JsonConvert.SerializeObject(novoFuncionario);
+
+                // Envia a solicitação POST para a API
+                using (var httpClient = new HttpClient())
+                {
+                    var content = new StringContent(jsonFuncionario, Encoding.UTF8, "application/json");
+                    var response = await httpClient.PostAsync(apiUrl, content);
+
+                    // Verifica se a resposta foi bem-sucedida
+                    if (response.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("Funcionário cadastrado com sucesso!");
+                        LimparCampos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erro ao cadastrar o funcionário.");
+                    }
+                }
             }
-            // Criar objeto Funcionario com base nos dados do formulário
-            var novoFuncionario = new
+            catch (Exception ex)
             {
-                nome = txtNome.Text,
-                cpf = txtCPF.Text,
-                telefone = txtTelefone.Text,
-                endereco = txtEndereco.Text,
-                salario = Convert.ToDecimal(txtSalario.Text),
-                dtAdmissao = Convert.ToDateTime(txtDataAdmissao.Text),
-                departamento = cdDepartamento,
-                dataNascimento = Convert.ToDateTime(txtDataNascimento.Text),
-                cargo = txtCargo.Text
-                // Adicione outros campos conforme necessário
-            };
-
-            // Converter o objeto Funcionario para JSON
-            var jsonFuncionario = Newtonsoft.Json.JsonConvert.SerializeObject(novoFuncionario);
-
-            // Enviar a solicitação POST para a API
-            using (var httpClient = new HttpClient())
-            {
-                var content = new StringContent(jsonFuncionario, Encoding.UTF8, "application/json");
-                var response = await httpClient.PostAsync(apiUrl, content);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    MessageBox.Show("Funcionário cadastrado com sucesso!");
-                    LimparCampos();
-                }
-                else
-                {
-                    MessageBox.Show("Erro ao cadastrar o funcionário.");
-                }
+                MessageBox.Show("Ocorreu um erro: " + ex.Message);
             }
         }
 
+        // Método executado ao clicar no botão "Voltar"
         private void button2_Click(object sender, EventArgs e)
         {
             // Fecha todas as instâncias da tela atual

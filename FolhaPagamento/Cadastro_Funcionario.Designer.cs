@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(iStorm));
             label1 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -109,7 +110,6 @@
             label7.Size = new Size(54, 15);
             label7.TabIndex = 6;
             label7.Text = "Telefone:";
-            label7.Click += label7_Click;
             // 
             // label8
             // 
@@ -173,7 +173,6 @@
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(168, 23);
             txtNome.TabIndex = 16;
-            txtNome.TextChanged += textBox2_TextChanged;
             // 
             // txtCargo
             // 
@@ -181,7 +180,6 @@
             txtCargo.Name = "txtCargo";
             txtCargo.Size = new Size(100, 23);
             txtCargo.TabIndex = 17;
-            txtCargo.TextChanged += textBox3_TextChanged;
             // 
             // txtEndereco
             // 
@@ -197,7 +195,6 @@
             txtCPF.Name = "txtCPF";
             txtCPF.Size = new Size(100, 23);
             txtCPF.TabIndex = 28;
-            txtCPF.MaskInputRejected += maskedTextBox2_MaskInputRejected;
             // 
             // txtTelefone
             // 
@@ -247,7 +244,6 @@
             txtDepartamento.Name = "txtDepartamento";
             txtDepartamento.Size = new Size(121, 23);
             txtDepartamento.TabIndex = 37;
-            txtDepartamento.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // txtDataAdmissao
             // 
@@ -256,7 +252,6 @@
             txtDataAdmissao.Name = "txtDataAdmissao";
             txtDataAdmissao.Size = new Size(96, 23);
             txtDataAdmissao.TabIndex = 38;
-            txtDataAdmissao.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // iStorm
             // 
@@ -286,8 +281,9 @@
             Controls.Add(label12);
             Controls.Add(label9);
             Controls.Add(label8);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "iStorm";
-            Text = "iStorm";
+            Text = "iStorm RH";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)txtSalario).EndInit();
             ResumeLayout(false);

@@ -1,12 +1,8 @@
 ﻿using Newtonsoft.Json; // Biblioteca para trabalhar com JSON
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using System.Net.Http;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FolhaPagamento
@@ -27,20 +23,22 @@ namespace FolhaPagamento
         {
             try
             {
-                HttpClient client = new HttpClient(); // Cliente para fazer requisições HTTP
-                HttpResponseMessage response = await client.GetAsync(apiUrl); // Faz a requisição GET para a API
-
-                if (response.IsSuccessStatusCode) // Se a requisição foi bem-sucedida
+                using (HttpClient client = new HttpClient()) // Cliente para fazer requisições HTTP
                 {
-                    string json = await response.Content.ReadAsStringAsync(); // Lê o conteúdo da resposta como uma string JSON
-                    dadosOriginais = JsonConvert.DeserializeObject<List<SeuObjeto>>(json); // Converte o JSON para uma lista de objetos
+                    HttpResponseMessage response = await client.GetAsync(apiUrl); // Faz a requisição GET para a API
 
-                    // Popula o DataGridView com os dados obtidos da API
-                    dataGridView1.DataSource = dadosOriginais;
-                }
-                else
-                {
-                    MessageBox.Show("Falha ao obter os dados da API. Código de status: " + response.StatusCode);
+                    if (response.IsSuccessStatusCode) // Se a requisição foi bem-sucedida
+                    {
+                        string json = await response.Content.ReadAsStringAsync(); // Lê o conteúdo da resposta como uma string JSON
+                        dadosOriginais = JsonConvert.DeserializeObject<List<SeuObjeto>>(json); // Converte o JSON para uma lista de objetos
+
+                        // Popula o DataGridView com os dados obtidos da API
+                        dataGridView1.DataSource = dadosOriginais;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Falha ao obter os dados da API. Código de status: " + response.StatusCode);
+                    }
                 }
             }
             catch (Exception ex)
