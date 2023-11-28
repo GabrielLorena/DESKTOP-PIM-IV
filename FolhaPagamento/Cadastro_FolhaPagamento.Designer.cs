@@ -31,9 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro_FolhaPagamento));
             button1 = new Button();
             btnEnviar_Click = new Button();
-            label14 = new Label();
-            label1 = new Label();
-            label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
@@ -44,58 +41,49 @@
             txtBonus = new TextBox();
             txtHorasTra = new TextBox();
             txtDataVi = new DateTimePicker();
+            label8 = new Label();
+            label14 = new Label();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
+            button2 = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(30, 400);
+            button1.BackColor = Color.MediumSlateBlue;
+            button1.BackgroundImageLayout = ImageLayout.Center;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.MediumSlateBlue;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(0, 415);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(75, 35);
             button1.TabIndex = 0;
-            button1.Text = "Voltar";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // btnEnviar_Click
             // 
-            btnEnviar_Click.Location = new Point(685, 400);
+            btnEnviar_Click.BackColor = Color.MediumSlateBlue;
+            btnEnviar_Click.BackgroundImageLayout = ImageLayout.Center;
+            btnEnviar_Click.Cursor = Cursors.Hand;
+            btnEnviar_Click.FlatStyle = FlatStyle.Flat;
+            btnEnviar_Click.ForeColor = Color.MediumSlateBlue;
+            btnEnviar_Click.Image = (Image)resources.GetObject("btnEnviar_Click.Image");
+            btnEnviar_Click.Location = new Point(726, 415);
             btnEnviar_Click.Name = "btnEnviar_Click";
-            btnEnviar_Click.Size = new Size(75, 23);
+            btnEnviar_Click.Size = new Size(75, 35);
             btnEnviar_Click.TabIndex = 14;
-            btnEnviar_Click.Text = "Cadastrar";
-            btnEnviar_Click.UseVisualStyleBackColor = true;
+            btnEnviar_Click.UseVisualStyleBackColor = false;
             btnEnviar_Click.Click += btnEnviar_Click_Click;
-            // 
-            // label14
-            // 
-            label14.BorderStyle = BorderStyle.FixedSingle;
-            label14.Location = new Point(30, 353);
-            label14.Name = "label14";
-            label14.Size = new Size(727, 1);
-            label14.TabIndex = 36;
-            // 
-            // label1
-            // 
-            label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.Location = new Point(33, 66);
-            label1.Name = "label1";
-            label1.Size = new Size(727, 1);
-            label1.TabIndex = 37;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(231, 23);
-            label2.Name = "label2";
-            label2.Size = new Size(278, 25);
-            label2.TabIndex = 38;
-            label2.Text = "Cadastro Folha de Pagamento";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(265, 115);
+            label3.ForeColor = Color.MediumSlateBlue;
+            label3.Location = new Point(277, 140);
             label3.Name = "label3";
             label3.Size = new Size(70, 15);
             label3.TabIndex = 39;
@@ -104,7 +92,8 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(265, 145);
+            label4.ForeColor = Color.MediumSlateBlue;
+            label4.Location = new Point(296, 170);
             label4.Name = "label4";
             label4.Size = new Size(51, 15);
             label4.TabIndex = 40;
@@ -113,7 +102,8 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(265, 178);
+            label5.ForeColor = Color.MediumSlateBlue;
+            label5.Location = new Point(246, 203);
             label5.Name = "label5";
             label5.Size = new Size(103, 15);
             label5.TabIndex = 41;
@@ -122,7 +112,8 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(265, 216);
+            label6.ForeColor = Color.MediumSlateBlue;
+            label6.Location = new Point(307, 241);
             label6.Name = "label6";
             label6.Size = new Size(40, 15);
             label6.TabIndex = 42;
@@ -131,7 +122,8 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(265, 248);
+            label7.ForeColor = Color.MediumSlateBlue;
+            label7.Location = new Point(268, 273);
             label7.Name = "label7";
             label7.Size = new Size(79, 15);
             label7.TabIndex = 43;
@@ -139,45 +131,110 @@
             // 
             // txtFuncionario
             // 
-            txtFuncionario.Location = new Point(374, 107);
+            txtFuncionario.BorderStyle = BorderStyle.FixedSingle;
+            txtFuncionario.Cursor = Cursors.IBeam;
+            txtFuncionario.Location = new Point(355, 132);
             txtFuncionario.Name = "txtFuncionario";
             txtFuncionario.Size = new Size(159, 23);
             txtFuncionario.TabIndex = 44;
             // 
             // txtImposto
             // 
-            txtImposto.Location = new Point(374, 137);
+            txtImposto.BorderStyle = BorderStyle.FixedSingle;
+            txtImposto.Cursor = Cursors.IBeam;
+            txtImposto.Location = new Point(355, 162);
             txtImposto.Name = "txtImposto";
             txtImposto.Size = new Size(100, 23);
             txtImposto.TabIndex = 45;
             // 
             // txtBonus
             // 
-            txtBonus.Location = new Point(374, 208);
+            txtBonus.BorderStyle = BorderStyle.FixedSingle;
+            txtBonus.Cursor = Cursors.IBeam;
+            txtBonus.Location = new Point(355, 233);
             txtBonus.Name = "txtBonus";
             txtBonus.Size = new Size(100, 23);
             txtBonus.TabIndex = 47;
             // 
             // txtHorasTra
             // 
-            txtHorasTra.Location = new Point(374, 175);
+            txtHorasTra.BorderStyle = BorderStyle.FixedSingle;
+            txtHorasTra.Cursor = Cursors.IBeam;
+            txtHorasTra.Location = new Point(355, 200);
             txtHorasTra.Name = "txtHorasTra";
             txtHorasTra.Size = new Size(100, 23);
             txtHorasTra.TabIndex = 48;
             // 
             // txtDataVi
             // 
+            txtDataVi.Cursor = Cursors.IBeam;
             txtDataVi.Format = DateTimePickerFormat.Short;
-            txtDataVi.Location = new Point(372, 242);
+            txtDataVi.Location = new Point(353, 267);
             txtDataVi.Name = "txtDataVi";
-            txtDataVi.Size = new Size(96, 23);
+            txtDataVi.Size = new Size(102, 23);
             txtDataVi.TabIndex = 50;
+            // 
+            // label8
+            // 
+            label8.BackColor = Color.MediumSlateBlue;
+            label8.BorderStyle = BorderStyle.FixedSingle;
+            label8.Location = new Point(0, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(801, 35);
+            label8.TabIndex = 51;
+            // 
+            // label14
+            // 
+            label14.BackColor = Color.MediumSlateBlue;
+            label14.BorderStyle = BorderStyle.FixedSingle;
+            label14.Location = new Point(0, 415);
+            label14.Name = "label14";
+            label14.Size = new Size(801, 35);
+            label14.TabIndex = 52;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.MediumSlateBlue;
+            label1.Location = new Point(259, 64);
+            label1.Name = "label1";
+            label1.Size = new Size(306, 30);
+            label1.TabIndex = 53;
+            label1.Text = "Cadastro Folha de Pagamento";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(221, 64);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(32, 32);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 54;
+            pictureBox1.TabStop = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.MediumSlateBlue;
+            button2.BackgroundImageLayout = ImageLayout.Center;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.Location = new Point(764, 0);
+            button2.Name = "button2";
+            button2.Size = new Size(37, 35);
+            button2.TabIndex = 55;
+            button2.UseVisualStyleBackColor = false;
             // 
             // Cadastro_FolhaPagamento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button2);
+            Controls.Add(pictureBox1);
+            Controls.Add(label1);
+            Controls.Add(label8);
             Controls.Add(txtDataVi);
             Controls.Add(txtHorasTra);
             Controls.Add(txtBonus);
@@ -188,14 +245,15 @@
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(label14);
             Controls.Add(btnEnviar_Click);
             Controls.Add(button1);
+            Controls.Add(label14);
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Cadastro_FolhaPagamento";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "iStorm RH";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -204,9 +262,6 @@
 
         private Button button1;
         private Button btnEnviar_Click;
-        private Label label14;
-        private Label label1;
-        private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
@@ -217,5 +272,10 @@
         private TextBox txtBonus;
         private TextBox txtHorasTra;
         private DateTimePicker txtDataVi;
+        private Label label8;
+        private Label label14;
+        private Label label1;
+        private PictureBox pictureBox1;
+        private Button button2;
     }
 }

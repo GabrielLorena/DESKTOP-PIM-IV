@@ -30,99 +30,149 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Visualizar_FolhaPagamento1));
             button1 = new Button();
-            label1 = new Label();
-            label14 = new Label();
-            label2 = new Label();
             txtProcurar = new TextBox();
             btnBuscar = new Button();
             dataGridView1 = new DataGridView();
+            label3 = new Label();
+            label8 = new Label();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(12, 445);
+            button1.BackColor = Color.MediumSlateBlue;
+            button1.BackgroundImageLayout = ImageLayout.Center;
+            button1.Cursor = Cursors.Hand;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(-1, 415);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(75, 35);
             button1.TabIndex = 0;
-            button1.Text = "Voltar";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(267, 23);
-            label1.Name = "label1";
-            label1.Size = new Size(194, 25);
-            label1.TabIndex = 1;
-            label1.Text = "Folha de Pagamento";
-            // 
-            // label14
-            // 
-            label14.BorderStyle = BorderStyle.FixedSingle;
-            label14.Location = new Point(37, 78);
-            label14.Name = "label14";
-            label14.Size = new Size(727, 1);
-            label14.TabIndex = 36;
-            // 
-            // label2
-            // 
-            label2.BorderStyle = BorderStyle.FixedSingle;
-            label2.Location = new Point(37, 404);
-            label2.Name = "label2";
-            label2.Size = new Size(727, 1);
-            label2.TabIndex = 37;
             // 
             // txtProcurar
             // 
-            txtProcurar.Location = new Point(267, 100);
+            txtProcurar.BackColor = SystemColors.Control;
+            txtProcurar.BorderStyle = BorderStyle.FixedSingle;
+            txtProcurar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            txtProcurar.ForeColor = Color.MediumSlateBlue;
+            txtProcurar.Location = new Point(267, 103);
             txtProcurar.Name = "txtProcurar";
             txtProcurar.Size = new Size(232, 23);
             txtProcurar.TabIndex = 42;
             // 
             // btnBuscar
             // 
+            btnBuscar.BackColor = SystemColors.Control;
             btnBuscar.FlatAppearance.BorderSize = 0;
             btnBuscar.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 255, 128);
             btnBuscar.FlatStyle = FlatStyle.Flat;
-            btnBuscar.ForeColor = SystemColors.ActiveCaption;
             btnBuscar.Image = (Image)resources.GetObject("btnBuscar.Image");
             btnBuscar.Location = new Point(505, 100);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(49, 27);
             btnBuscar.TabIndex = 43;
-            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.BackgroundColor = SystemColors.Control;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(37, 143);
+            dataGridView1.GridColor = Color.MediumSlateBlue;
+            dataGridView1.Location = new Point(12, 145);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(727, 249);
+            dataGridView1.Size = new Size(776, 253);
             dataGridView1.TabIndex = 44;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.MediumSlateBlue;
+            label3.Location = new Point(230, 47);
+            label3.Name = "label3";
+            label3.Size = new Size(306, 30);
+            label3.TabIndex = 54;
+            label3.Text = "Cadastro Folha de Pagamento";
+            // 
+            // label8
+            // 
+            label8.BackColor = Color.MediumSlateBlue;
+            label8.BorderStyle = BorderStyle.FixedSingle;
+            label8.Location = new Point(-1, 415);
+            label8.Name = "label8";
+            label8.Size = new Size(801, 35);
+            label8.TabIndex = 55;
+            // 
+            // label1
+            // 
+            label1.BackColor = Color.MediumSlateBlue;
+            label1.BorderStyle = BorderStyle.FixedSingle;
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(801, 35);
+            label1.TabIndex = 56;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(192, 47);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(32, 32);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 57;
+            pictureBox1.TabStop = false;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.MediumSlateBlue;
+            button2.BackgroundImageLayout = ImageLayout.Center;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.Location = new Point(763, 0);
+            button2.Name = "button2";
+            button2.Size = new Size(37, 35);
+            button2.TabIndex = 58;
+            button2.UseVisualStyleBackColor = false;
             // 
             // Visualizar_FolhaPagamento1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 510);
+            AutoSize = true;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ClientSize = new Size(800, 450);
+            Controls.Add(button2);
+            Controls.Add(pictureBox1);
+            Controls.Add(label1);
+            Controls.Add(label3);
             Controls.Add(dataGridView1);
             Controls.Add(btnBuscar);
             Controls.Add(txtProcurar);
-            Controls.Add(label2);
-            Controls.Add(label14);
-            Controls.Add(label1);
             Controls.Add(button1);
+            Controls.Add(label8);
+            ForeColor = Color.MediumSlateBlue;
+            FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Visualizar_FolhaPagamento1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "iStorm RH";
+            Load += Visualizar_FolhaPagamento1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -130,11 +180,13 @@
         #endregion
 
         private Button button1;
-        private Label label1;
-        private Label label14;
-        private Label label2;
         private TextBox txtProcurar;
         private Button btnBuscar;
         private DataGridView dataGridView1;
+        private Label label3;
+        private Label label8;
+        private Label label1;
+        private PictureBox pictureBox1;
+        private Button button2;
     }
 }

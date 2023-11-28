@@ -117,5 +117,10 @@ namespace FolhaPagamento
                 formLogin.BringToFront();
             }
         }
+
+        private void Visualizar_FolhaPagamento1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
