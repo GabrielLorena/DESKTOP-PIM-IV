@@ -35,8 +35,7 @@ namespace FolhaPagamento
                         // Popula o DataGridView com os dados obtidos da API
                         dataGridView1.DataSource = dadosOriginais;
 
-                        // Configura a ordem das colunas após carregar os dados
-                        ConfigurarOrdemColunas();
+                       
                     }
                     else
                     {
@@ -50,36 +49,21 @@ namespace FolhaPagamento
             }
         }
 
-        // Método para configurar a ordem das colunas no DataGridView
-        private void ConfigurarOrdemColunas()
-        {
-            // Define a ordem desejada das colunas
-            string[] ordemColunas = { "Funcionario", "NomeFunc", "Imposto", "HorasTrabalhadas", "Bonus", "Data_Vigencia" };
-
-            // Configura a ordem das colunas no DataGridView
-            foreach (string nomeColuna in ordemColunas)
-            {
-                DataGridViewColumn coluna = dataGridView1.Columns[nomeColuna];
-                if (coluna != null)
-                {
-                    // Configura a visibilidade da coluna
-                    coluna.Visible = true;
-                    // Move a coluna para a posição desejada
-                    coluna.DisplayIndex = Array.IndexOf(ordemColunas, nomeColuna);
-                }
-            }
-        }
-
         // Classe representando os objetos da API
         public class SeuObjeto
         {
             // Propriedades dos objetos
+            public string Id { get; set; }
             public string Funcionario { get; set; }
             public string Imposto { get; set; }
+            public string vlImposto {  get; set; }
             public string HorasTrabalhadas { get; set; }
             public string Bonus { get; set; }
+            public string recebimento { get; set; }
             public DateTime Data_Vigencia { get; set; }
+            public string Usuario { get; set; }
             public string NomeFunc { get; set; }
+            public string Salario { get; set; }
 
         }
 

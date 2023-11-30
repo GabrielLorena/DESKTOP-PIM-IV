@@ -28,6 +28,7 @@ namespace FolhaPagamento
             txtHorasTra.Text = string.Empty;
             txtBonus.Text = string.Empty;
             txtDataVi.Text = string.Empty;
+            textUsuario.Text = string.Empty;
             // Limpar outros campos conforme necessário
         }
 
@@ -39,11 +40,13 @@ namespace FolhaPagamento
                 // Cria um objeto FolhaPagamento com base nos dados do formulário
                 var novaFolhaPagamento = new
                 {
+
                     funcionario = txtFuncionario.Text,
                     imposto = txtImposto.Text,
                     horasTrabalhadas = txtHorasTra.Text,
                     bonus = txtBonus.Text,
                     data_vigencia = Convert.ToDateTime(txtDataVi.Text),
+                    usuario = textUsuario.Text,
                 };
 
                 // Converte o objeto FolhaPagamento para JSON

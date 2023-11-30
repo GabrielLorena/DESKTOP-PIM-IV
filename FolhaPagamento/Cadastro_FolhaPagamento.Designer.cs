@@ -46,6 +46,8 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             button2 = new Button();
+            textUsuario = new TextBox();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -83,7 +85,7 @@
             // 
             label3.AutoSize = true;
             label3.ForeColor = Color.MediumSlateBlue;
-            label3.Location = new Point(277, 140);
+            label3.Location = new Point(274, 131);
             label3.Name = "label3";
             label3.Size = new Size(70, 15);
             label3.TabIndex = 39;
@@ -93,7 +95,7 @@
             // 
             label4.AutoSize = true;
             label4.ForeColor = Color.MediumSlateBlue;
-            label4.Location = new Point(296, 170);
+            label4.Location = new Point(293, 188);
             label4.Name = "label4";
             label4.Size = new Size(51, 15);
             label4.TabIndex = 40;
@@ -103,7 +105,7 @@
             // 
             label5.AutoSize = true;
             label5.ForeColor = Color.MediumSlateBlue;
-            label5.Location = new Point(246, 203);
+            label5.Location = new Point(243, 221);
             label5.Name = "label5";
             label5.Size = new Size(103, 15);
             label5.TabIndex = 41;
@@ -113,7 +115,7 @@
             // 
             label6.AutoSize = true;
             label6.ForeColor = Color.MediumSlateBlue;
-            label6.Location = new Point(307, 241);
+            label6.Location = new Point(304, 259);
             label6.Name = "label6";
             label6.Size = new Size(40, 15);
             label6.TabIndex = 42;
@@ -123,7 +125,7 @@
             // 
             label7.AutoSize = true;
             label7.ForeColor = Color.MediumSlateBlue;
-            label7.Location = new Point(268, 273);
+            label7.Location = new Point(265, 297);
             label7.Name = "label7";
             label7.Size = new Size(79, 15);
             label7.TabIndex = 43;
@@ -133,7 +135,7 @@
             // 
             txtFuncionario.BorderStyle = BorderStyle.FixedSingle;
             txtFuncionario.Cursor = Cursors.IBeam;
-            txtFuncionario.Location = new Point(355, 132);
+            txtFuncionario.Location = new Point(350, 129);
             txtFuncionario.Name = "txtFuncionario";
             txtFuncionario.Size = new Size(159, 23);
             txtFuncionario.TabIndex = 44;
@@ -142,7 +144,7 @@
             // 
             txtImposto.BorderStyle = BorderStyle.FixedSingle;
             txtImposto.Cursor = Cursors.IBeam;
-            txtImposto.Location = new Point(355, 162);
+            txtImposto.Location = new Point(352, 189);
             txtImposto.Name = "txtImposto";
             txtImposto.Size = new Size(100, 23);
             txtImposto.TabIndex = 45;
@@ -151,7 +153,7 @@
             // 
             txtBonus.BorderStyle = BorderStyle.FixedSingle;
             txtBonus.Cursor = Cursors.IBeam;
-            txtBonus.Location = new Point(355, 233);
+            txtBonus.Location = new Point(352, 251);
             txtBonus.Name = "txtBonus";
             txtBonus.Size = new Size(100, 23);
             txtBonus.TabIndex = 47;
@@ -160,7 +162,7 @@
             // 
             txtHorasTra.BorderStyle = BorderStyle.FixedSingle;
             txtHorasTra.Cursor = Cursors.IBeam;
-            txtHorasTra.Location = new Point(355, 200);
+            txtHorasTra.Location = new Point(352, 218);
             txtHorasTra.Name = "txtHorasTra";
             txtHorasTra.Size = new Size(100, 23);
             txtHorasTra.TabIndex = 48;
@@ -169,7 +171,7 @@
             // 
             txtDataVi.Cursor = Cursors.IBeam;
             txtDataVi.Format = DateTimePickerFormat.Short;
-            txtDataVi.Location = new Point(353, 267);
+            txtDataVi.Location = new Point(350, 291);
             txtDataVi.Name = "txtDataVi";
             txtDataVi.Size = new Size(102, 23);
             txtDataVi.TabIndex = 50;
@@ -226,11 +228,32 @@
             button2.TabIndex = 55;
             button2.UseVisualStyleBackColor = false;
             // 
+            // textUsuario
+            // 
+            textUsuario.BorderStyle = BorderStyle.FixedSingle;
+            textUsuario.Cursor = Cursors.IBeam;
+            textUsuario.Location = new Point(352, 158);
+            textUsuario.Name = "textUsuario";
+            textUsuario.Size = new Size(100, 23);
+            textUsuario.TabIndex = 56;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.ForeColor = Color.MediumSlateBlue;
+            label2.Location = new Point(293, 160);
+            label2.Name = "label2";
+            label2.Size = new Size(47, 15);
+            label2.TabIndex = 57;
+            label2.Text = "Usuario";
+            // 
             // Cadastro_FolhaPagamento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
+            Controls.Add(textUsuario);
             Controls.Add(button2);
             Controls.Add(pictureBox1);
             Controls.Add(label1);
@@ -277,5 +300,7 @@
         private Label label1;
         private PictureBox pictureBox1;
         private Button button2;
+        private TextBox textUsuario;
+        private Label label2;
     }
 }

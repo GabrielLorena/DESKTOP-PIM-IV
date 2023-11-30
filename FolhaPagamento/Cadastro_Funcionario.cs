@@ -94,7 +94,7 @@ namespace FolhaPagamento
                     }
                     else
                     {
-                        MessageBox.Show("Erro ao cadastrar o funcionário.");
+                        MessageBox.Show("Erro ao cadastrar Funcionario.");
                     }
                 }
             }
